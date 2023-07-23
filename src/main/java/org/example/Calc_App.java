@@ -18,15 +18,20 @@ public class Calc_App {
     private static final Scanner sc= new Scanner(System.in);
 
     // создаём логгер для класса, задавая ему префикс по названию класса
-    private static final Logger logger = (Logger) LoggerFactory.getLogger(Calc_App.class);
+    private static final Logger logger = LoggerFactory.getLogger(Calc_App.class);
     public static void main(String[] args) throws IOException {
+        System.out.println("Enter first num: ");
         int i = sc.nextInt();
-        logger.debug("Entered first num " + i);
+        logger.debug("Entered first num: " + i);
+
+        System.out.println("Enter second num: ");
         int j = sc.nextInt();
-        logger.debug("Entered second num " + j);
+        logger.debug("Entered second num: " + j);
+
         System.out.print("Enter a char: ");
         String k = sc.next();
-        logger.debug("Entered char " + k);
+        logger.debug("Entered char: " + k);
+
         switch (k) {
             case "+" -> i = getSum(i, j);
             case "-" -> i = getSub(i, j);
